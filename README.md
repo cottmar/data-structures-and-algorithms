@@ -5,4 +5,4 @@ To reverse an array without using .reverse, I would try to use a reverse for loo
 Reverse an array without using any built-in methods. 
 
 # Solution
-![](/img/reverse-an-array.jpg);
+![](/assets/reverse-an-array.jpg);
