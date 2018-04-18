@@ -3,7 +3,7 @@
 
 
 ## Challenge
-create a function that takes in 2 params (sorted array, search key) and return the index of the arrays element that is equal to the search key. If search key doesn't match, return -1. 
+create a function that takes in 2 params (sorted array, search key) and return the index of the arrays element that is equal to the search key. If search key doesn't match, return -1. .
 
 ## Solution
 ![](/assets/binary-search.jpg)
