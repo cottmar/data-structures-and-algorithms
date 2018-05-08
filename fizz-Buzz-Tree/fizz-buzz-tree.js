@@ -1,18 +1,26 @@
-const preOrderTraversal = (rootNode) => {
-  if (rootNode === null) {
-    return;
-  }
-  console.log('Visiting $rootNode.value');
-  // LOGIC
-  preOrderTraversal(rootNode.left);
-  preOrderTraversal(rootNode.right);
+'use strict';
+
+const fizzBizzTree = (binaryTree) => {
+  const preOrderTraversal = (rootNode) => {
+    if (rootNode === null) {
+      return undefined;
+    }
+
+    if (rootNode.value / 3) {
+      rootNode.value = 'Fizz';
+    }
+    if (rootNode.value / 5) {
+      rootNode.value = 'Buzz';
+    }
+    if (rootNode.value / 3 && rootNode.value / 5) {
+      rootNode.value = 'FizzBuzz';
+    }
+    console.log(`Visiting a node with value ${rootNode.value}`);
+    preOrderTraversal(rootNode.left);
+    preOrderTraversal(rootNode.right);
+    return binaryTree;
+  };
+  preOrderTraversal(binaryTree.root);
 };
 
-// this is the logic
-rootNode.value = 'Fizz';
-rootNode.value = 'Buzz';
-rootNode.value = 'FizzBuzz';
-
-// several if/else statements. 
-
-// insetad of console.log, you change it to be the logic. 
+export default fizzBizzTree;
