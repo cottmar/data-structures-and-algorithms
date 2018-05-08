@@ -6,13 +6,13 @@ const fizzBizzTree = (binaryTree) => {
       return undefined;
     }
 
-    if (rootNode.value / 3) {
+    if (rootNode.value % 3 === 0) {
       rootNode.value = 'Fizz';
     }
-    if (rootNode.value / 5) {
+    if (rootNode.value % 5 === 0) {
       rootNode.value = 'Buzz';
     }
-    if (rootNode.value / 3 && rootNode.value / 5) {
+    if (rootNode.value === 'Fizz' && rootNode.value === 'Buzz') {
       rootNode.value = 'FizzBuzz';
     }
     console.log(`Visiting a node with value ${rootNode.value}`);
