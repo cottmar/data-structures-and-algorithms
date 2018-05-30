@@ -1,18 +1,28 @@
-const hashTable = (key) => {
-  let hash = 0;
-  for (let i = 0; i < key.length; i++) {
-    hash += key.charCodeAt(i);
-  }
-  return hash;
-};
+// Big O:
+// time: O(n)
+// space: O
 
-const repeatedWord = (string) => {
-  if (typeof key !== 'string') {
-    throw new TypeError('HASHMAP ERROR: key should be a string');
+const repeatedWord = 'A dog, a best friend.';
+
+const findRepeated = (str) => {
+  if (typeof str !== 'string') {
+    throw new TypeError('ERROR: key should be a string');
   }
-}
-// still working on javascript.
-const map = {};
-for (let i = 0; i < array.length; i++) {
-  if (!map[wordFound])  
-}
+  if (str === '') {
+    throw new TypeError('ERROR: string cannot be empty');
+  }
+  str = str.toLowerCase();
+  // convert string into array using regex
+  const array = str.match(/\w+/g)
+  const map = {};
+  for (let i = 0; i < array.length; i++) {
+    if (!map[array[i]]) {
+      map[array[i]] = 1;
+    } else if (map[array[i]]) {
+        return array[i];
+      }
+    } 
+    return null;
+  } 
+
+  console.log(findRepeated(repeatedWord));
