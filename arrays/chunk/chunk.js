@@ -12,7 +12,7 @@ function chunk(array, size) {
   const chunked = [];
 
   for (const element of array) {
-    const last = chunked[chunked.length - 1];
+    const last = chunked[chunked.length - 1]; // gets the last element
 
     if (!last || last.length === size) {
       chunked.push([element]);
@@ -20,6 +20,18 @@ function chunk(array, size) {
       last.push(element);
     }
   }
+  return chunked;
+}
+
+function chunk(array, size) {
+  const chunked = [];
+  let index = 0 // variable that will change over time
+
+  while (index < array.length) {
+    chunked.push(array.slice(index, index + size));
+    index += size;
+  }
+
   return chunked;
 }
 
