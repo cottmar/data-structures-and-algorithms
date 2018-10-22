@@ -82,7 +82,7 @@ class LinkedList {
       last.next = new Node(data);
     } else {
       // This means the chain is empty
-      this.head - new Node(data);
+      this.head = new Node(data);
     }
   }
 
@@ -103,6 +103,23 @@ class LinkedList {
       node = node.next;
     }
     return null;
+  }
+
+  removeAt(index) {
+    if (!this.head) {
+      return;
+    }
+    
+    if (index === 0) {
+      this.head = this.head.next;
+      return;
+    }
+
+    const previous = this.getAt(index - 1);
+    if (!previous.next) {
+      return;
+    }
+    previous.next = previous.next.next;
   }
 }
 
