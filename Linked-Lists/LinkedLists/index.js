@@ -11,7 +11,20 @@ class LinkedList {
   }
 
   insertFirst(data) {
-    this.head = new Node(data, this.head)
+    this.head = new Node(data, this.head);
+  }
+
+  size() {
+    // totals number of nodes in LL
+    let counter = 0;
+    let node = this.head;
+
+    while (node) {
+      counter++; // eslint-disable-line
+      node = node.next;
+    }
+
+    return counter;
   }
 }
 

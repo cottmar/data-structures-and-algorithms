@@ -1,6 +1,7 @@
 'use strict';
 
 const L = require('../index');
+
 const List = L.LinkedList;
 const Node = L.Node;
 
@@ -30,7 +31,7 @@ describe('Insert First', () => {
   });
 });
 
-describe.skip('Size', () => {
+describe('Size', () => {
   test('returns the number of items in the linked list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
