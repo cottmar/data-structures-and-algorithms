@@ -11,7 +11,7 @@ function maxChar(str) {
   let max = 0;
   let maxChar = '';
 
-  for (const char of str) {
+  for (let char of str) {
     if (charMap[char]) {
       charMap[char]++;
     } else {
